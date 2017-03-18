@@ -35,9 +35,7 @@ qcom.bluetooth.soc=rome
 
 # Camera
 camera.disable_zsl_mode=1
-persist.camera.imglib.fddsp=1
-persist.camera.llc=1
-persist.camera.llnoise=1
+persist.camera.hal.debug=0
 
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
