@@ -2,6 +2,16 @@ LOCAL_PATH := $(call my-dir)
 
 # Device init scripts
 
+# OnePlus Camera Service
+include $(CLEAR_VARS)
+LOCAL_MODULE := OnePlusCameraService
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := apks/$(LOCAL_MODULE).apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE		:= fstab.qcom
 LOCAL_MODULE_TAGS	:= optional eng
