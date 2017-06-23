@@ -41,7 +41,10 @@ ifneq ($(HOST_OS),darwin)
     SDCLANG := true 
     SDCLANG_PATH := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin
     SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk 
-endif 
+endif
+
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
