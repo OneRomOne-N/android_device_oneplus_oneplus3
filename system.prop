@@ -69,7 +69,7 @@ debug.gralloc.enable_fb_ubwc=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 ro.opengles.version=196610
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 persist.sys.wfd.virtual=0
 sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
@@ -132,7 +132,7 @@ persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
 # Storage
-ro.sys.sdcardfs=true
+#ro.sys.sdcardfs=true
 
 # Timeservice
 persist.timed.enable=true
