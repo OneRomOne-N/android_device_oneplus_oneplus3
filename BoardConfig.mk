@@ -79,6 +79,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := ../../../../../../prebuilts/gcc/linux-x86/
 # Add fix for common JACK issues
 ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
 
+# Set buildtype official  
+NUCLEAR_BUILDTYPE := OFFICIAL
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
