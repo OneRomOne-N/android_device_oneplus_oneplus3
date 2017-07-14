@@ -14,7 +14,7 @@ on property:sys.boot_completed=1
 
 # Balance (default profile)
 on property:persist.spectrum.profile=0
-    write /proc/sys/kernel/sched_boost 0
+    write /proc/sys/kernel/sched_boost 1
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800 2:1036800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 300
 	write /sys/module/cpu_boost/parameters/input_boost_enabled 1
@@ -25,10 +25,10 @@ on property:persist.spectrum.profile=0
     write /sys/block/dm-1/queue/scheduler "maple"
     write /sys/block/sda/queue/scheduler "maple"
     write /sys/block/sde/queue/scheduler "maple"
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/dm-0/queue/read_ahead_kb 256
+    write /sys/block/dm-1/queue/read_ahead_kb 256
+    write /sys/block/sda/queue/read_ahead_kb 256
+    write /sys/block/sde/queue/read_ahead_kb 256
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
