@@ -332,6 +332,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
 
+# Weather providers
+PRODUCT_PACKAGES += \
+    OpenWeatherMapWeatherProvider \
+    YahooWeatherProvider \
+    WundergroundWeatherProvider
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
