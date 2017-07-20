@@ -298,6 +298,10 @@ PRODUCT_PACKAGES += \
     init.spectrum.sh \
     ueventd.qcom.rc
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_op3
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
