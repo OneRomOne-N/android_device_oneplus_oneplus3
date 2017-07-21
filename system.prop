@@ -38,6 +38,18 @@ persist.camera.imglib.fddsp=1
 persist.camera.llc=1
 persist.camera.llnoise=1
 
+# Enable RAW support and camera modes
+persist.camera.hal3.prv.feature=1
+ro.camcorder.videoModes=true
+persist.camera.promode=true
+ro.config.hw_camera_hdr=true
+ro.config.hw_camera_bestShot=true
+persist.camera.tintless=enable
+persist.camera.4k2k.enable=1
+vidc.dec.120fps.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.enc.hprof.vid.fps=120
+
 # Display power reduction (FOSS)
 ro.qcom.dpps.sensortype=3
 ro.qualcomm.display.paneltype=1
