@@ -228,5 +228,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+#Force Color Metadata Off
+TARGET_USES_COLOR_METADATA := false
+
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus3/BoardConfigVendor.mk
