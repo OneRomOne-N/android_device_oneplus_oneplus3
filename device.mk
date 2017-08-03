@@ -163,6 +163,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SelinuxModeChanger
 
+# Busybox
+PRODUCT_PACKAGES += \
+    busybox
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
