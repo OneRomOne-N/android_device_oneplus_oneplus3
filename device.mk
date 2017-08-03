@@ -293,6 +293,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8996
 
+# Preloaded classes
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/preloaded-classes:system/etc/preloaded-classes
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
