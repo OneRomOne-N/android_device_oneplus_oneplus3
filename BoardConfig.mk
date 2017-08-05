@@ -59,7 +59,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := kryo
 
 ENABLE_CPUSETS := true
-ENABLE_SCHED_BOOST := true
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -75,7 +74,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8996
 TARGET_KERNEL_CONFIG := radioactive_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := ../../../../../../prebuilts/gcc/linux-x86/aarch64/aarch64-linux-kernel-linaro-7.x/bin/aarch64-linaro-linux-gnu-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := ../../../../../../prebuilts/gcc/linux-x86/aarch64/aarch64-linux-kernel-linaro-6.x/bin/aarch64-linux-gnu-
 
 # Add fix for common JACK issues
 ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
