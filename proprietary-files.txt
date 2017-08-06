@@ -489,9 +489,7 @@ lib64/libfilter-sdk.so
 lib64/libopbaselib.so
 lib64/libopcameralib.so
 lib64/libopcamera.so
-
-# OnePlus CameraService
-lib/libcameraservice.so
-lib/libmediaplayerservice.so
-lib64/libcameraservice.so
-lib64/libmediaplayerservice.so
+lib/libfilter-sdk.so
+lib/libopbaselib.so
+lib/libopcameralib.so
+lib/libopcamera.so
