@@ -208,6 +208,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
 
+# High performance VR feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
+
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
@@ -293,6 +297,10 @@ PRODUCT_PACKAGES += \
     init.spectrum.rc \
     init.spectrum.sh \
     ueventd.qcom.rc
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_op3
 
 # RIL
 PRODUCT_PACKAGES += \
