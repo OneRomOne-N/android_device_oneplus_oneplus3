@@ -37,6 +37,12 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus3,oneplus3,OnePlus3T,oneplus3t
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+ifneq ($(HOST_OS),darwin) 
+    SDCLANG := true 
+    SDCLANG_PATH := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin
+    SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk 
+endif 
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
 TARGET_NO_BOOTLOADER := true
@@ -79,6 +85,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := ../../../../../../prebuilts/gcc/linux-x86/
 
 # Add fix for common JACK issues
 ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
+
+# Set buildtype official  
+NUCLEAR_BUILDTYPE := OFFICIAL
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
