@@ -36,6 +36,7 @@ qcom.bluetooth.soc=rome
 # Camera
 camera.disable_zsl_mode=1
 persist.camera.hal.debug=0
+camera.hal1.packagelist=com.oneplus.camera
 
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
