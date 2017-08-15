@@ -161,8 +161,13 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     Snap \
     libcamera_shim
+=======
+    libcamera_shim \
+    OnePlusCamera
+>>>>>>> e2c8764... Hello Nuclear cam!!
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
