@@ -157,9 +157,6 @@ persist.sys.usb.config=mtp,adb
 ro.ril.enable.amr.wideband=1
 ro.config.hw_quickpoweron=true
 
-#property to enable sde downscale feature for external display
-#sdm.debug.downscale_external=1
-
 #property to specify the number of frames to skip before setting hint
 sdm.perf_hint_window=50
 
@@ -204,7 +201,7 @@ ro.hwui.text_large_cache_width=3072
 ro.hwui.text_large_cache_height=2048
 
 #force HAL1 for some apps
-camera.hal1.packagelist=com.snapchat.android
+camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
 
 #reschedule killed services during app launch
 ro.am.reschedule_service=true
