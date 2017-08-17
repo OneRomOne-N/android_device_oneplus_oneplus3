@@ -34,7 +34,9 @@ persist.bt.enableAptXHD=true
 qcom.bluetooth.soc=rome
 
 # Camera
-camera.disable_zsl_mode=1
+persist.camera.imglib.fddsp=1
+persist.camera.llc=1
+persist.camera.llnoise=1
 persist.camera.hal.debug=0
 
 # Enable RAW support and camera modes
@@ -85,15 +87,15 @@ net.rmnet0.dns2=8.8.4.4
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 
- # DalvikVM
- dalvik.vm.verify-bytecode=false
- dalvik.vm.execution-mode=int:fast
- dalvik.vm.dexopt-data-only=1
- dalvik.vm.heapstartsize=1m
- dalvik.vm.heapgrowthlimit=64m
- dalvik.vm.heapsize=128m
- dalvik.vm.lockprof.threshold=250
- dalvik.vm.jmiopts=forcecopy
+# DalvikVM
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:fast
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.heapstartsize=1m
+dalvik.vm.heapgrowthlimit=64m
+dalvik.vm.heapsize=128m
+dalvik.vm.lockprof.threshold=250
+dalvik.vm.jmiopts=forcecopy
 dalvik.vm.dex2oat-filter=speed
 
 ## Don't touch the properties below :p
@@ -102,7 +104,7 @@ dalvik.vm.checkjni=false
 dalvik.vm.usejit=true
 dalvik.vm.dexopt-flags=v=a,o=v
 
- #Disable Miscellaneous Android Logging Stuff
+#Disable Miscellaneous Android Logging Stuff
 debugtool.anrhistory=0
 profiler.debugmonitor=false
 profiler.launch=false
@@ -139,19 +141,19 @@ persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
- # Signal Tweaks
- ro.ril.hsxpa=1
- ro.ril.gprsclass=10
- ro.ril.hsdpa.category=8
- ro.ril.hsupa.category=6
- ro.config.combined_signal=true
+# Signal Tweaks
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.ril.hsdpa.category=8
+ro.ril.hsupa.category=6
+ro.config.combined_signal=true
 
- # Makes streaming videos stream faster
- media.stagefright.enable-player=true
- media.stagefright.enable-meta=true
- media.stagefright.enable-scan=true
- media.stagefright.enable-http=true
- media.stagefright.enable-record=true
+# Makes streaming videos stream faster
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-record=true
 
 # System Tweaks
 ro.ril.enable.amr.wideband=1
@@ -160,8 +162,8 @@ ro.config.hw_quickpoweron=true
 #property to specify the number of frames to skip before setting hint
 sdm.perf_hint_window=50
 
-ro.nfc.port=I2C
 # system prop for NFC DT
+ro.nfc.port=I2C
 
 # Dexopt everything inside the boot image
 dalvik.vm.image-dex2oat-filter=everything
@@ -182,7 +184,7 @@ ro.config.disable.hw_accel=false
 debug.kill_allocating_task=0
 ro.debuggable=1
 
- # More RAM
+# More RAM
 persist.sys.purgeable_assets=1
 persist.service.pcsync.enable=0
 persist.service.lgospd.enable=0
