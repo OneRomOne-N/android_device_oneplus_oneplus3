@@ -98,12 +98,6 @@ dalvik.vm.lockprof.threshold=250
 dalvik.vm.jmiopts=forcecopy
 dalvik.vm.dex2oat-filter=speed
 
-## Don't touch the properties below :p
-dalvik.vm.check-dex-sum=false
-dalvik.vm.checkjni=false
-dalvik.vm.usejit=true
-dalvik.vm.dexopt-flags=v=a,o=v
-
 #Disable Miscellaneous Android Logging Stuff
 debugtool.anrhistory=0
 profiler.debugmonitor=false
@@ -113,22 +107,6 @@ profiler.hung.dumpdobugreport=false
 #Disable Kernel Error Checking
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
-
-# Better call voice quality.
-debug.enabletr=true
-debug.overlayui.enable=1
-ro.fb.mode=1
-ro.sf.compbypass.enable=0
-ro.vold.umsdirtyratio=20
-persist.sys.composition.type=c2d
-
-#Minimum brightness of your screen
-ro.lcd_min_brightness=1
-
-# Dialing Tweaks
-ro.telephony.call_ring.delay=0
-ro.lge.proximity.delay=25
-mot.proximity.delay=25
 
 # Increase camera's photo and video recording quality
 ro.media.dec.aud.wma.enabled=1
@@ -140,45 +118,6 @@ persist.adb.notify=0
 persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
-
-# Signal Tweaks
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-ro.ril.hsdpa.category=8
-ro.ril.hsupa.category=6
-ro.config.combined_signal=true
-
-# Makes streaming videos stream faster
-media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-scan=true
-media.stagefright.enable-http=true
-media.stagefright.enable-record=true
-
-# System Tweaks
-ro.ril.enable.amr.wideband=1
-ro.config.hw_quickpoweron=true
-
-#property to specify the number of frames to skip before setting hint
-sdm.perf_hint_window=50
-
-# system prop for NFC DT
-ro.nfc.port=I2C
-
-# Dexopt everything inside the boot image
-dalvik.vm.image-dex2oat-filter=everything
-
-pm.sleep_mode=1
-ro.config.nocheckin=1
-ro.ril.disable.power.collapse=1
-wifi.supplicant_scan_interval=180
-ro.config.hw_fast_dormancy=1
-persist.sys.shutdown.mode=hibernate
-ro.config.hw_power_saving=true
-debug.performance.tuning=1
-persist.sys.ui.hw=1
-ro.config.disable.hw_accel=false
-
 
  # Performance
 debug.kill_allocating_task=0
@@ -205,9 +144,6 @@ ro.hwui.text_large_cache_height=2048
 #force HAL1 for some apps
 camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
 
-#reschedule killed services during app launch
-ro.am.reschedule_service=true
-
 # Graphics
 debug.sf.hw=1
 debug.egl.hw=1
@@ -220,10 +156,6 @@ persist.sys.wfd.virtual=0
 sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
 sdm.debug.disable_rotator_split=1
-
-# IMS
-persist.volte_enabled_by_hw=1
-persist.data.iwlan.enable=true
 
 # NFC
 ro.nfc.port=I2C
@@ -280,6 +212,7 @@ persist.data.df.dev_name=rmnet_usb0
 #ro.sys.sdcardfs=true
 
 # VoLTE
+persist.volte_enabled_by_hw=1
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=0
