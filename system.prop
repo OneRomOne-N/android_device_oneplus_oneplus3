@@ -76,6 +76,98 @@ persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
+# Google DNS
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+ #Disable Miscellaneous Android Logging Stuff
+debugtool.anrhistory=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+
+#Disable Kernel Error Checking
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Better call voice quality.
+debug.enabletr=true
+debug.overlayui.enable=1
+ro.fb.mode=1
+ro.sf.compbypass.enable=0
+ro.vold.umsdirtyratio=20
+persist.sys.composition.type=c2d
+
+#Minimum brightness of your screen
+ro.lcd_min_brightness=1
+
+# Dialing Tweaks
+ro.telephony.call_ring.delay=0
+ro.lge.proximity.delay=25
+mot.proximity.delay=25
+
+# Increase camera's photo and video recording quality
+ro.media.dec.aud.wma.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.dec.vid.wmv.enabled=1
+
+#Enable ADB Debugging By Default & Disable USB Debugging Popup
+persist.adb.notify=0
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+ # Signal Tweaks
+ ro.ril.hsxpa=1
+ ro.ril.gprsclass=10
+ ro.ril.hsdpa.category=8
+ ro.ril.hsupa.category=6
+ ro.config.combined_signal=true
+
+ # Makes streaming videos stream faster
+ media.stagefright.enable-player=true
+ media.stagefright.enable-meta=true
+ media.stagefright.enable-scan=true
+ media.stagefright.enable-http=true
+ media.stagefright.enable-record=true
+
+# System Tweaks
+ro.ril.enable.amr.wideband=1
+ro.config.hw_quickpoweron=true
+
+#property to enable sde downscale feature for external display
+#sdm.debug.downscale_external=1
+
+#property to specify the number of frames to skip before setting hint
+sdm.perf_hint_window=50
+
+ro.nfc.port=I2C
+# system prop for NFC DT
+
+# Dexopt everything inside the boot image
+dalvik.vm.image-dex2oat-filter=everything
+
+#hwui properties
+ro.hwui.layer_cache_size=64
+ro.hwui.texture_cache_size=96
+ro.hwui.r_buffer_cache_size=12
+ro.hwui.path_cache_size=39
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=7
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=2048
+ro.hwui.text_small_cache_height=2048
+ro.hwui.text_large_cache_width=3072
+ro.hwui.text_large_cache_height=2048
+
+#force HAL1 for some apps
+camera.hal1.packagelist=com.snapchat.android
+
+#reschedule killed services during app launch
+ro.am.reschedule_service=true
+
 # Graphics
 debug.sf.hw=1
 debug.egl.hw=1
