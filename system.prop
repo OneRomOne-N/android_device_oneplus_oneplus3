@@ -34,9 +34,10 @@ persist.bt.enableAptXHD=true
 qcom.bluetooth.soc=rome
 
 # Camera
-camera.disable_zsl_mode=1
+persist.camera.imglib.fddsp=1
+persist.camera.llc=1
+persist.camera.llnoise=1
 persist.camera.hal.debug=0
-camera.hal1.packagelist=com.oneplus.camera
 
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
@@ -80,6 +81,69 @@ persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
+# Google DNS
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# DalvikVM
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:fast
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.heapstartsize=1m
+dalvik.vm.heapgrowthlimit=64m
+dalvik.vm.heapsize=128m
+dalvik.vm.lockprof.threshold=250
+dalvik.vm.jmiopts=forcecopy
+dalvik.vm.dex2oat-filter=speed
+
+#Disable Miscellaneous Android Logging Stuff
+debugtool.anrhistory=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+
+#Disable Kernel Error Checking
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Increase camera's photo and video recording quality
+ro.media.dec.aud.wma.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.dec.vid.wmv.enabled=1
+
+#Enable ADB Debugging By Default & Disable USB Debugging Popup
+persist.adb.notify=0
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+ # Performance
+debug.kill_allocating_task=0
+ro.debuggable=1
+
+# More RAM
+persist.sys.purgeable_assets=1
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+
+#hwui properties
+ro.hwui.layer_cache_size=64
+ro.hwui.texture_cache_size=96
+ro.hwui.r_buffer_cache_size=12
+ro.hwui.path_cache_size=39
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=7
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=2048
+ro.hwui.text_small_cache_height=2048
+ro.hwui.text_large_cache_width=3072
+ro.hwui.text_large_cache_height=2048
+
+#force HAL1 for some apps
+camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
+
 # Graphics
 debug.sf.hw=1
 debug.egl.hw=1
@@ -92,10 +156,6 @@ persist.sys.wfd.virtual=0
 sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
 sdm.debug.disable_rotator_split=1
-
-# IMS
-persist.volte_enabled_by_hw=1
-persist.data.iwlan.enable=true
 
 # NFC
 ro.nfc.port=I2C
@@ -126,8 +186,7 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 persist.radio.multisim.config=dsds
 persist.radio.data_ltd_sys_ind=1
-ro.telephony.call_ring.multiple=false
-persist.radio.apm_sim_not_pwdn=1
+persist.data.iwlan.enable=true
 persist.radio.custom_ecc=1
 persist.radio.sib16_support=1
 persist.data.qmi.adb_logmask=0
@@ -153,6 +212,7 @@ persist.data.df.dev_name=rmnet_usb0
 #ro.sys.sdcardfs=true
 
 # VoLTE
+persist.volte_enabled_by_hw=1
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=0
