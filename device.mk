@@ -291,10 +291,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8996
 
-# Preloaded classes
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/preloaded-classes:system/etc/preloaded-classes
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml
 
