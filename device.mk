@@ -165,7 +165,7 @@ PRODUCT_PACKAGES += \
     libcamera_shim \
     OnePlusCamera \
     OnePlusCameraService \
-    cam
+    GoogleCamera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \

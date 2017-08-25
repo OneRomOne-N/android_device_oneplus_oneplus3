@@ -22,7 +22,7 @@ include $(BUILD_PREBUILT)
 
 #Google camera
 include $(CLEAR_VARS)
-LOCAL_MODULE := cam
+LOCAL_MODULE := GoogleCamera
 LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
