@@ -225,8 +225,6 @@ on property:sys.boot_completed=1
     write /sys/module/wakeup/parameters/enable_netlink_ws 0
     write /sys/module/wakeup/parameters/enable_ipa_ws 0
     write /sys/module/wakeup/parameters/enable_timerfd_ws 0
-    write /sys/module/bcmdhd/parameters/wlrx_divide 8
-    write /sys/module/bcmdhd/parameters/wlctrl_divide 8
 
     # Backlight dimmer
     write /sys/module/mdss_fb/parameters/backlight_dimmer 1
