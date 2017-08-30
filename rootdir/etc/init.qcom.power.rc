@@ -230,6 +230,9 @@ on property:sys.boot_completed=1
     # Enable adreno idler
     write /sys/module/adreno_idler/parameters/adreno_idler_active Y
 
+    # change default tcp congestion algorithm
+    write /proc/sys/net/ipv4/tcp_congestion_control "westwood"
+
     # Disable some wakelocks
     write /sys/module/wakeup/parameters/enable_wlan_rx_wake_ws 0
     write /sys/module/wakeup/parameters/enable_wlan_ctrl_wake_ws 0
