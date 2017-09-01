@@ -87,17 +87,6 @@ net.rmnet0.dns2=8.8.4.4
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 
-# DalvikVM
-dalvik.vm.verify-bytecode=false
-dalvik.vm.execution-mode=int:fast
-dalvik.vm.dexopt-data-only=1
-dalvik.vm.heapstartsize=1m
-dalvik.vm.heapgrowthlimit=64m
-dalvik.vm.heapsize=128m
-dalvik.vm.lockprof.threshold=250
-dalvik.vm.jmiopts=forcecopy
-dalvik.vm.dex2oat-filter=speed
-
 #Disable Miscellaneous Android Logging Stuff
 debugtool.anrhistory=0
 profiler.debugmonitor=false
@@ -127,19 +116,6 @@ ro.debuggable=1
 persist.sys.purgeable_assets=1
 persist.service.pcsync.enable=0
 persist.service.lgospd.enable=0
-
-#hwui properties
-ro.hwui.layer_cache_size=64
-ro.hwui.texture_cache_size=96
-ro.hwui.r_buffer_cache_size=12
-ro.hwui.path_cache_size=39
-ro.hwui.gradient_cache_size=1
-ro.hwui.drop_shadow_cache_size=7
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.text_small_cache_width=2048
-ro.hwui.text_small_cache_height=2048
-ro.hwui.text_large_cache_width=3072
-ro.hwui.text_large_cache_height=2048
 
 #force HAL1 for some apps
 camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
