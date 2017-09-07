@@ -21,10 +21,10 @@ on property:persist.spectrum.profile=0
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
-    write /sys/block/dm-0/queue/scheduler "bfq"
-    write /sys/block/dm-1/queue/scheduler "bfq"
-    write /sys/block/sda/queue/scheduler "bfq"
-    write /sys/block/sde/queue/scheduler "bfq"
+    write /sys/block/dm-0/queue/scheduler "zen"
+    write /sys/block/dm-1/queue/scheduler "zen"
+    write /sys/block/sda/queue/scheduler "zen"
+    write /sys/block/sde/queue/scheduler "zen"
     write /sys/block/dm-0/queue/read_ahead_kb 256
     write /sys/block/dm-1/queue/read_ahead_kb 256
     write /sys/block/sda/queue/read_ahead_kb 256

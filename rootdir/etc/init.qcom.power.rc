@@ -152,10 +152,10 @@ on class_start:late_start
 
 on property:sys.boot_completed=1
     # Tweak IO performance after boot complete
-    write /sys/block/dm-0/queue/scheduler "bfq"
-    write /sys/block/dm-1/queue/scheduler "bfq"
-    write /sys/block/sda/queue/scheduler "bfq"
-    write /sys/block/sde/queue/scheduler "bfq"
+    write /sys/block/dm-0/queue/scheduler "zen"
+    write /sys/block/dm-1/queue/scheduler "zen"
+    write /sys/block/sda/queue/scheduler "zen"
+    write /sys/block/sde/queue/scheduler "zen"
 
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
