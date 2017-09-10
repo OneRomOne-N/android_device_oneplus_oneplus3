@@ -159,6 +159,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/iot_devlist.conf:system/etc/bluetooth/iot_devlist.conf
 
+# Selinux Mode Changer
+PRODUCT_PACKAGES += \
+    SelinuxModeChanger
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
