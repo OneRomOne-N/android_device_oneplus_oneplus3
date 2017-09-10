@@ -171,6 +171,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     busybox
 
+# Selinux Mode Changer
+PRODUCT_PACKAGES += \
+    SelinuxModeChanger
+
 # Camera
 PRODUCT_PACKAGES += \
     OnePlusCamera \
