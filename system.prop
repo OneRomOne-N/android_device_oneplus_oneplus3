@@ -33,12 +33,6 @@ bt.max.hfpclient.connections=1
 persist.bt.enableAptXHD=true
 qcom.bluetooth.soc=rome
 
-# Camera
-persist.camera.imglib.fddsp=1
-persist.camera.llc=1
-persist.camera.llnoise=1
-persist.camera.hal.debug=0
-
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
 ro.camcorder.videoModes=true
@@ -141,7 +135,9 @@ ro.am.reschedule_service=true
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.min_freq_0=307200
 ro.min_freq_4=307200
-ro.sys.fw.bg_apps_limit=60
+ro.sys.fw.bg_apps_limit=36
+enable_prefetch=1
+persist.mm.enable.prefetch=true
 
 # QCOM
 ro.frp.pst=/dev/block/bootdevice/by-name/config
