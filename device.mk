@@ -71,10 +71,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/rootdir/mod/google.xml:system/etc/sysconfig/google.xml
 
-# Enable GMS Doze
-PRODUCT_COPY_FILES += \
-  $(LOCAL_PATH)/rootdir/mod/google.xml:system/etc/sysconfig/google.xml
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
