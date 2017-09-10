@@ -123,11 +123,10 @@ on enable-low-power
 
     # Change GPU initial power level from level 6 to level 6 for power savings
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
-
+    
     # Set perfd properties
-	rm /data/system/perfd/default_values
-	start perfd
-
+    setprop sys.post_boot.parsed 1
+    
     # Starting io prefetcher service
     start iop
 
