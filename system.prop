@@ -31,7 +31,13 @@ ro.cutoff_voltage_mv=3250
 # Bluetooth
 bt.max.hfpclient.connections=1
 persist.bt.enableAptXHD=true
-qcom.bluetooth.soc=rome
+qcom.bluetooth.soc=rome 
+
+#Camera
+persist.camera.imglib.fddsp=1
+persist.camera.llc=1
+persist.camera.llnoise=1
+persist.camera.hal.debug=0
 
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
@@ -101,15 +107,6 @@ persist.adb.notify=0
 persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
-
- # Performance
-debug.kill_allocating_task=0
-ro.debuggable=1
-
-# More RAM
-persist.sys.purgeable_assets=1
-persist.service.pcsync.enable=0
-persist.service.lgospd.enable=0
 
 #force HAL1 for some apps
 camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
@@ -196,11 +193,6 @@ persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
-
-# Higher fling velocities
-# to smooth scrolling and provide better responsiveness
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
 
 # Google Assistant
 ro.opa.eligible_device=true
