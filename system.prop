@@ -38,6 +38,18 @@ persist.camera.imglib.fddsp=1
 persist.camera.llc=1
 persist.camera.llnoise=1
 
+# Enable RAW support and camera modes
+persist.camera.hal3.prv.feature=1
+ro.camcorder.videoModes=true
+persist.camera.promode=true
+ro.config.hw_camera_hdr=true
+ro.config.hw_camera_bestShot=true
+persist.camera.tintless=enable
+persist.camera.4k2k.enable=1
+vidc.dec.120fps.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.enc.hprof.vid.fps=120
+
 # Display power reduction (FOSS)
 ro.qcom.dpps.sensortype=3
 ro.qualcomm.display.paneltype=1
@@ -67,6 +79,36 @@ persist.qfp=false
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
+
+# Google DNS
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+#Disable Miscellaneous Android Logging Stuff
+debugtool.anrhistory=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+
+#Disable Kernel Error Checking
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Increase camera's photo and video recording quality
+ro.media.dec.aud.wma.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.dec.vid.wmv.enabled=1
+
+#Enable ADB Debugging By Default & Disable USB Debugging Popup
+persist.adb.notify=0
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+#force HAL1 for some apps
+camera.hal1.packagelist=org.codeaurora.snapcam,com.snapchat.android,com.oneplus.camera
 
 # Graphics
 debug.sf.hw=1
@@ -140,8 +182,19 @@ persist.data.df.dev_name=rmnet_usb0
 # Storage
 ro.sys.sdcardfs=true
 
+# VoLTE
+persist.volte_enabled_by_hw=1
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.data.iwlan.enable=true
+persist.dbg.wfc_avail_ovr=0
+
 # Timeservice
 persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
+
+# Google Assistant
+ro.opa.eligible_device=true
