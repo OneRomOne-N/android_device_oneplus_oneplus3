@@ -31,12 +31,13 @@ ro.cutoff_voltage_mv=3250
 # Bluetooth
 bt.max.hfpclient.connections=1
 persist.bt.enableAptXHD=true
-qcom.bluetooth.soc=rome
+qcom.bluetooth.soc=rome 
 
 # Camera
 persist.camera.imglib.fddsp=1
 persist.camera.llc=1
 persist.camera.llnoise=1
+persist.camera.hal.debug=0
 
 # Enable RAW support and camera modes
 persist.camera.hal3.prv.feature=1
@@ -123,10 +124,6 @@ sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
 sdm.debug.disable_rotator_split=1
 
-# IMS
-persist.volte_enabled_by_hw=1
-persist.data.iwlan.enable=true
-
 # NFC
 ro.nfc.port=I2C
 
@@ -135,7 +132,9 @@ ro.am.reschedule_service=true
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.min_freq_0=307200
 ro.min_freq_4=307200
-ro.sys.fw.bg_apps_limit=60
+ro.sys.fw.bg_apps_limit=36
+enable_prefetch=1
+persist.mm.enable.prefetch=true
 
 # QCOM
 ro.frp.pst=/dev/block/bootdevice/by-name/config
@@ -156,8 +155,7 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 persist.radio.multisim.config=dsds
 persist.radio.data_ltd_sys_ind=1
-ro.telephony.call_ring.multiple=false
-persist.radio.apm_sim_not_pwdn=1
+persist.data.iwlan.enable=true
 persist.radio.custom_ecc=1
 persist.radio.sib16_support=1
 persist.data.qmi.adb_logmask=0
