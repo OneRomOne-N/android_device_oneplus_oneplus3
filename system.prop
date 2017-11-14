@@ -24,6 +24,8 @@ audio.offload.gapless.enabled=true
 audio.safx.pbe.enabled=true
 audio.parser.ip.buffer.size=262144
 qcom.hw.aac.encoder=true
+ro.config.vc_call_vol_steps=8
+ro.config.media_vol_steps=20
 
 # Battery
 ro.cutoff_voltage_mv=3250
@@ -60,7 +62,8 @@ persist.sys.strictmode.disable=true
 persist.qfp=false
 
 # GPS
-persist.gps.qc_nlp_in_use=0
+persist.gps.qc_nlp_in_use=1
+persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
 # Graphics
@@ -121,16 +124,6 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
-
-# Storage
-#ro.sys.sdcardfs=true
-
-# VoLTE
-persist.dbg.ims_volte_enable=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=0
-persist.data.iwlan.enable=true
-persist.dbg.wfc_avail_ovr=0
 
 # Timeservice
 persist.timed.enable=true

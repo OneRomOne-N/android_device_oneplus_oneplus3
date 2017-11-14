@@ -23,4 +23,3 @@
     <!-- Indicate that this device has Dash Charger -->
 	<bool name="config_hasDashCharger">true</bool>
 </resources>
-
