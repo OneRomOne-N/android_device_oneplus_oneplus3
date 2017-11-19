@@ -284,6 +284,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.target.rc \
+    init.spectrum.rc \
+    init.spectrum.sh \
     ueventd.qcom.rc
 
 # Recovery
