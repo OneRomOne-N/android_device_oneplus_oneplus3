@@ -1,25 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-#OnePlus Camera
-include $(CLEAR_VARS)
-LOCAL_MODULE := OnePlusCamera
-LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_CERTIFICATE := PRESIGNED
-include $(BUILD_PREBUILT)
-
-#OnePlusCameraService
-include $(CLEAR_VARS)
-LOCAL_MODULE := OnePlusCameraService
-LOCAL_SRC_FILES := apps/$(LOCAL_MODULE).apk
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_CERTIFICATE := PRESIGNED
-include $(BUILD_PREBUILT)
-
 #Google camera
 include $(CLEAR_VARS)
 LOCAL_MODULE := GoogleCamera
