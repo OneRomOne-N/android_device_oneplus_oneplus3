@@ -63,17 +63,6 @@ EOF
 cat << EOF >> "$ANDROIDMK"
 endif
 
-ifneq (\$(TARGET_HAVE_QC_PERF),true)
-EOF
-
-write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
-
-echo "endif" >> "$PRODUCTMK"
-
-cat << EOF >> "$ANDROIDMK"
-
-endif
-
 EOF
 
 # Finish
