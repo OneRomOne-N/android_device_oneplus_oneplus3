@@ -40,11 +40,6 @@ on enable-low-power
     write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 0
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
-    # Enable Adaptive LMK
-    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,51256,110296,200640"
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 162500
-
     # Configure governor settings for little cluster
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
@@ -122,10 +117,6 @@ on enable-low-power
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
 
-    # Set perfd properties
-	rm /data/system/perfd/default_values
-	start perfd
-
     # Starting io prefetcher service
     start iop
 
@@ -141,7 +132,7 @@ on charger
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/module/msm_thermal/core_control/cpus_offlined 14
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "conservative"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     start dashd
 
@@ -150,17 +141,14 @@ on class_start:late_start
 
 on property:sys.boot_completed=1
     # Tweak IO performance after boot complete
-    write /sys/block/dm-0/queue/scheduler "zen"
-    write /sys/block/dm-1/queue/scheduler "zen"
-    write /sys/block/sda/queue/scheduler "zen"
-    write /sys/block/sde/queue/scheduler "zen"
-
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
-    write /sys/block/sda/queue/read_ahead_kb 512
-	write /sys/block/sda/queue/iostats 1
-	write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/sde/queue/read_ahead_kb 512
+    write /sys/block/dm-0/queue/scheduler "cfq"
+    write /sys/block/dm-1/queue/scheduler "cfq"
+    write /sys/block/sda/queue/scheduler "cfq"
+    write /sys/block/sde/queue/scheduler "cfq"
+    write  /sys/block/sda/queue/read_ahead_kb 128
+    write  /sys/block/sda/queue/iosched/back_seek_penalty 4
+    write  /sys/block/sda/queue/iosched/low_latency 0
+    write  /sys/block/sda/queue/iosched/target_latency_us 300
 
     # Update foreground and background cpusets
     write /dev/cpuset/top-app/cpus 0-3
@@ -176,8 +164,9 @@ on property:sys.boot_completed=1
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Input boost configuration
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800 2:1036800"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 300
+    write /sys/kernel/cpu_input_boost/ib_freqs "1228800 1324800"
+    write /sys/kernel/cpu_input_boost/ib_duration_ms 1400
+    write /sys/kernel/cpu_input_boost/enabled 1
 	
     # Configure governor settings for little cluster
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
@@ -233,11 +222,10 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2150400
    
-    # Re-enable thermal and BCL hotplug
-    write /sys/module/msm_thermal/core_control/enabled 1
-    write /sys/devices/soc/soc:qcom,bcl/mode "disable"
-    write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 0
-    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 0
-    write /sys/devices/soc/soc:qcom,bcl/mode "enable"
+    # MSM Thermal thresholds
+    write  /sys/module/msm_thermal/parameters/enabled Y
+    write  /sys/module/msm_thermal/core_control/enabled 0
+    write  /sys/module/msm_thermal/parameters/temp_threshold 50
+    write  /sys/module/msm_thermal/parameters/core_limit_temp_degC 60
 
 	write /dev/kmsg "Boot completed "
